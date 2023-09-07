@@ -83,7 +83,7 @@ export default function Home() {
               alignItems: "center",
               flexDirection: "row",
               mt: { xs: 0, md: -2 },
-              width: { xs: "96vw", md: "60%" },
+              width: { xs: "96vw", md: "100%" },
             }}
           >
             <Typography
