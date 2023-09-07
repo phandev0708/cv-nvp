@@ -1,8 +1,8 @@
 "use client";
+import { ItemNavRight, navigationMock } from "@/mocks/data-menu";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import { Drawer, IconButton, Stack, Tooltip, Typography } from "@mui/material";
 import { usePathname, useRouter } from "next/navigation";
-import { ItemNavRight, navigationMock } from "./data-mocks";
 interface RightBarComponentProps {
   close: () => void;
   open: boolean;
