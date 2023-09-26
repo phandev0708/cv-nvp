@@ -10,13 +10,13 @@
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
   display: block;
-  -webkit-transition: all 0.4s ease-in-out;
+  /* -webkit-transition: all 0.4s ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
   animation-name: showcase;
   -webkit-animation-name: showcase;
   animation-duration: 1.5s;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s; */
 }
 
 #ncMain {

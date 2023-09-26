@@ -109,6 +109,44 @@ export default function Home() {
               left: 30,
               bottom: 40,
               position: "absolute",
+              webkitAnimation: "info 0.6s forwards",
+              animation: "info 0.6s forwards",
+              webkitAnimationIterationCount: 1,
+              animationIterationCount: 1,
+              webkitAnimationDelay: "2.6s",
+              animationDelay: "2.6s",
+              webkitTransitionTimingFunction: "ease-in-out",
+              transitionTimingFunction: "ease-in-out",
+              filter: "alpha(opacity=0)",
+              opacity: 0,
+              "@-webkit-keyframes info": {
+                "0%": {
+                  opacity: 0,
+                  filter: "alpha(opacity=0)",
+                  left: 30,
+                  bottom: -20,
+                },
+                "100%": {
+                  opacity: 1,
+                  filter: "alpha(opacity=100)",
+                  left: 30,
+                  bottom: 40,
+                },
+              },
+              "@keyframes info": {
+                "0%": {
+                  opacity: 0,
+                  filter: "alpha(opacity=0)",
+                  left: 30,
+                  bottom: -20,
+                },
+                "100%": {
+                  opacity: 1,
+                  filter: "alpha(opacity=100)",
+                  left: 30,
+                  bottom: 40,
+                },
+              },
             }}
           >
             <Stack sx={{ flexDirection: "row" }}>
