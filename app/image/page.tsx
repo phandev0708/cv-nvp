@@ -32,7 +32,7 @@ export default function TitlebarBelowImageList() {
         pr: 8,
         pb: 8,
         width: "100vw",
-        minHeight: "100vh",
+        height: "100vh",
         animation: "slideInFromLeft 3s forwards",
         "@keyframes slideInFromLeft": {
           "0%": {
@@ -42,6 +42,7 @@ export default function TitlebarBelowImageList() {
             opacity: 1,
           },
         },
+        overflow: "auto",
       }}
     >
       <Grid2 container spacing={2}>
