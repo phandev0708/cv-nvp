@@ -4,6 +4,24 @@ import React from "react";
 export interface ISkillCompProps {}
 
 export default function SkillComp(props: ISkillCompProps) {
+  const data = [
+    {
+      title: "Ngôn ngữ và Framework",
+      content: [
+        "HTML5, CSS, JavaScript",
+        "NestJs, NextJs, Typescript,...",
+        "SQL Server, MySQL, MariaDB, PostgreSQL",
+      ],
+    },
+    {
+      title: "Quy trình làm việc",
+      content: [
+        "Phát triển website theo yêu cầu của khách hàng",
+        "Hỗ trợ Deploy sản phẩm lên server",
+        "Xử lý dữ liệu và tối ưu hóa hệ thống",
+      ],
+    },
+  ];
   return (
     <Stack
       sx={{
@@ -40,82 +58,39 @@ export default function SkillComp(props: ISkillCompProps) {
           >
             Kỹ Năng
           </Typography>
-          <Stack sx={{ pt: 2 }}>
-            <Stack>
-              <Typography
-                sx={{
-                  color: "white",
-                  fontSize: { xs: 20, sm: 30 },
-                  fontWeight: 600,
-                  fontStyle: "italic",
-                }}
-              >
-                Ngôn ngữ và Framework
-              </Typography>
-            </Stack>
-            <Stack>
-              <Stack
-                sx={{
-                  color: "white",
-                  pt: 1,
-                }}
-              >
+          {data.map((item, index) => (
+            <Stack sx={{ pt: 2 }} key={index}>
+              <Stack>
                 <Typography
-                  sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
+                  sx={{
+                    color: "white",
+                    fontSize: { xs: 20, sm: 30 },
+                    fontWeight: 600,
+                    fontStyle: "italic",
+                  }}
                 >
-                  - HTML5, CSS, JavaScript
-                </Typography>
-                <Typography
-                  sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
-                >
-                  - NestJs, NextJs, Typescript,...
-                </Typography>
-                <Typography
-                  sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
-                >
-                  - SQL Server, MySQL, MariaDB, PostgreSQL
+                  {item.title}
                 </Typography>
               </Stack>
-            </Stack>
-          </Stack>
-          <Stack sx={{ pt: 2 }}>
-            <Stack>
-              <Typography
-                sx={{
-                  color: "white",
-                  fontSize: { xs: 20, sm: 30 },
-                  fontWeight: 600,
-                  fontStyle: "italic",
-                }}
-              >
-                Quy trình làm việc
-              </Typography>
-            </Stack>
-            <Stack>
-              <Stack
-                sx={{
-                  color: "white",
-                  pt: 1,
-                }}
-              >
-                <Typography
-                  sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
+              <Stack>
+                <Stack
+                  sx={{
+                    color: "white",
+                    pt: 1,
+                  }}
                 >
-                  - Phát triển website theo yêu cầu của khách hàng
-                </Typography>
-                <Typography
-                  sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
-                >
-                  - Hỗ trợ Deploy sản phẩm lên server
-                </Typography>
-                <Typography
-                  sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
-                >
-                  - Xử lý dữ liệu và tối ưu hóa hệ thống
-                </Typography>
+                  {item.content.map((content, index) => (
+                    <Typography
+                      key={index}
+                      sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
+                    >
+                      - {content}
+                    </Typography>
+                  ))}
+                </Stack>
               </Stack>
             </Stack>
-          </Stack>
+          ))}
         </Stack>
       </Stack>
     </Stack>

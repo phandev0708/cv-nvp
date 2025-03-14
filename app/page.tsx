@@ -49,7 +49,7 @@ export default function Home() {
         CheckSec +
         "  ";
 
-      if (new Date().getMonth() + 1 == 6 && new Date().getDate() == 10) {
+      if (new Date().getMonth() + 1 == 8 && new Date().getDate() == 7) {
         clearInterval(countDown);
         p.innerHTML = "Happy Birthday To Nguyễn Văn Phần";
       }
@@ -96,10 +96,10 @@ export default function Home() {
           <Stack className={style.cover}></Stack>
           <Stack
             className={style.userinfomain}
-            sx={{ justifyContent: "center", alignItems: "center" }}
+            sx={{ justifyContent: "center", alignItems: "center", gap: 5 }}
           >
             <h1 className={style.h1}>Nguyễn Văn Phần</h1>
-            <h2 className={style.h2}>Lập Trình Viên</h2>
+            <h2 className={style.h2}>Lập Trình Viên Fullstack</h2>
           </Stack>
           <Stack className={style.Stackider}></Stack>
           <Stack

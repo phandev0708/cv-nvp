@@ -4,6 +4,16 @@ import React from "react";
 export interface IInterestsCompProps {}
 
 export default function InterestsComp(props: IInterestsCompProps) {
+  const data = [
+    "⚽ Đá banh",
+    "🌏 Du lịch",
+    "🎤 Ca hát",
+    "📷 Chụp ảnh",
+    "🥋 Võ thuật",
+    "🌳 Làm vườn",
+    "🎮 Chơi game",
+    "🎧 Nghe nhạc",
+  ];
   return (
     <Stack
       sx={{
@@ -42,166 +52,28 @@ export default function InterestsComp(props: IInterestsCompProps) {
 
           <Stack sx={{ pt: 3, pl: { xs: 0, sm: 0 } }}>
             <Grid container spacing={0} gap={2}>
-              <Grid xs={3} sm={4} md={3} lg={2}>
-                <Stack
-                  sx={{
-                    color: "white",
-                    width: { xs: 100, sm: 120 },
-                    border: "1px solid white",
-                    borderRadius: "10px",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    pt: 0.5,
-                    pb: 0.5,
-                  }}
-                >
-                  <Typography
-                    sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
+              {data.map((item, index) => (
+                <Grid xs={3} sm={4} md={3} lg={2} key={index}>
+                  <Stack
+                    sx={{
+                      color: "white",
+                      width: { xs: 100, sm: 120 },
+                      border: "1px solid white",
+                      borderRadius: "10px",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      pt: 0.5,
+                      pb: 0.5,
+                    }}
                   >
-                    ️⚽ Đá banh
-                  </Typography>
-                </Stack>
-              </Grid>
-              <Grid xs={3} sm={4} md={3} lg={2}>
-                <Stack
-                  sx={{
-                    color: "white",
-                    width: { xs: 100, sm: 120 },
-                    border: "1px solid white",
-                    borderRadius: "10px",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    pt: 0.5,
-                    pb: 0.5,
-                  }}
-                >
-                  <Typography
-                    sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
-                  >
-                    🌏 Du lịch
-                  </Typography>
-                </Stack>
-              </Grid>
-              <Grid xs={3} sm={4} md={3} lg={2}>
-                <Stack
-                  sx={{
-                    color: "white",
-                    width: { xs: 100, sm: 120 },
-                    border: "1px solid white",
-                    borderRadius: "10px",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    pt: 0.5,
-                    pb: 0.5,
-                  }}
-                >
-                  <Typography
-                    sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
-                  >
-                    ️🎤 Ca hát
-                  </Typography>
-                </Stack>
-              </Grid>
-              <Grid xs={3} sm={4} md={3} lg={2}>
-                <Stack
-                  sx={{
-                    color: "white",
-                    width: { xs: 100, sm: 120 },
-                    border: "1px solid white",
-                    borderRadius: "10px",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    pt: 0.5,
-                    pb: 0.5,
-                  }}
-                >
-                  <Typography
-                    sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
-                  >
-                    📷 Chụp ảnh
-                  </Typography>
-                </Stack>
-              </Grid>
-              <Grid xs={3} sm={4} md={3} lg={2}>
-                <Stack
-                  sx={{
-                    color: "white",
-                    width: { xs: 100, sm: 120 },
-                    border: "1px solid white",
-                    borderRadius: "10px",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    pt: 0.5,
-                    pb: 0.5,
-                  }}
-                >
-                  <Typography
-                    sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
-                  >
-                    ️🥋 Võ thuật
-                  </Typography>
-                </Stack>
-              </Grid>
-              <Grid xs={3} sm={4} md={3} lg={2}>
-                <Stack
-                  sx={{
-                    color: "white",
-                    width: { xs: 100, sm: 120 },
-                    border: "1px solid white",
-                    borderRadius: "10px",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    pt: 0.5,
-                    pb: 0.5,
-                  }}
-                >
-                  <Typography
-                    sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
-                  >
-                    ️🌳 Làm vườn
-                  </Typography>
-                </Stack>
-              </Grid>
-              <Grid xs={3} sm={4} md={3} lg={2}>
-                <Stack
-                  sx={{
-                    color: "white",
-                    width: { xs: 100, sm: 120 },
-                    border: "1px solid white",
-                    borderRadius: "10px",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    pt: 0.5,
-                    pb: 0.5,
-                  }}
-                >
-                  <Typography
-                    sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
-                  >
-                    ️🎮 Chơi game
-                  </Typography>
-                </Stack>
-              </Grid>
-              <Grid xs={3} sm={4} md={3} lg={2}>
-                <Stack
-                  sx={{
-                    color: "white",
-                    width: { xs: 100, sm: 120 },
-                    border: "1px solid white",
-                    borderRadius: "10px",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    pt: 0.5,
-                    pb: 0.5,
-                  }}
-                >
-                  <Typography
-                    sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
-                  >
-                    ️🎧 Nghe nhạc
-                  </Typography>
-                </Stack>
-              </Grid>
+                    <Typography
+                      sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
+                    >
+                      ️{item}
+                    </Typography>
+                  </Stack>
+                </Grid>
+              ))}
             </Grid>
           </Stack>
         </Stack>

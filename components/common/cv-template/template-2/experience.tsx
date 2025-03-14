@@ -4,6 +4,32 @@ import React from "react";
 export interface IExperienceCompProps {}
 
 export default function ExperienceComp(props: IExperienceCompProps) {
+  const data = [
+    {
+      company: "BEARABYTE SOFTWARE SOLUTIONS LLC",
+      time: "08/2024 - Hiện nay",
+      position: "Nhân viên lập trình fullstack",
+      description: ["Phát triển website theo yêu cầu của khách hàng"],
+    },
+    {
+      company: "Công ty cổ phần công nghệ ORYZA SYSTEMS",
+      time: "04/2022 - 21/03/2025",
+      position: "Nhân viên lập trình fullstack",
+      description: [
+        "Phát triển website theo yêu cầu của khách hàng",
+        "Hỗ trợ Deploy sản phẩm lên server",
+        "Quản lý cơ sở dữ liệu và tối ưu hóa hệ thống",
+      ],
+    },
+    {
+      company: "Công ty TNHH giải pháp VNTTS",
+      time: "11/2021 - 04/2022",
+      position: "CTV Lập Trình Viên",
+      description: [
+        "Hỗ trợ chỉnh sửa giao diện website và nghiên cứu phần mềm mã nguồn mở.",
+      ],
+    },
+  ];
   return (
     <Stack
       sx={{
@@ -41,116 +67,61 @@ export default function ExperienceComp(props: IExperienceCompProps) {
           >
             Kinh Nghiệm Làm Việc
           </Typography>
-          <Stack>
-            <Stack
-              sx={{
-                color: "white",
-                flexDirection: "row",
-                alignItems: "center",
-                pt: { xs: 5, sm: 2 },
-                justifyContent: "space-between",
-                // maxWidth: 400,
-              }}
-            >
-              <Typography
+          {data.map((item, index) => (
+            <Stack key={index}>
+              <Stack
                 sx={{
-                  fontSize: { xs: 20, sm: 30 },
-                  fontWeight: 600,
-                  textTransform: "uppercase",
+                  color: "white",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  pt: { xs: 5, sm: 2 },
+                  justifyContent: "space-between",
                 }}
               >
-                Công ty cổ phần công nghệ ORYZA SYSTEMS
-              </Typography>
-              <Typography sx={{ fontSize: { xs: 10, sm: 14 } }}>
-                04/2022 - Hiện nay
-              </Typography>
-            </Stack>
-            <Stack
-              sx={{
-                color: "white",
-                pt: 1,
-              }}
-            >
-              <Typography
+                <Typography
+                  sx={{
+                    fontSize: { xs: 20, sm: 30 },
+                    fontWeight: 600,
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {item.company}
+                </Typography>
+                <Typography sx={{ fontSize: { xs: 10, sm: 14 } }}>
+                  {item.time}
+                </Typography>
+              </Stack>
+              <Stack
                 sx={{
-                  fontSize: { xs: 14, sm: 20 },
-                  fontWeight: 600,
-                  fontStyle: "italic",
+                  color: "white",
+                  pt: 1,
                 }}
               >
-                Nhân viên lập trình
-              </Typography>
-            </Stack>
-            <Stack
-              sx={{
-                color: "white",
-                justifyContent: "center",
-                pt: 1,
-              }}
-            >
-              <Typography sx={{ fontSize: { xs: 14, sm: 16 } }}>
-                - Phát triển website theo yêu cầu của khách hàng
-              </Typography>
-              <Typography sx={{ fontSize: { xs: 14, sm: 16 } }}>
-                - Hỗ trợ Deploy sản phẩm lên server
-              </Typography>
-              <Typography sx={{ fontSize: { xs: 14, sm: 16 } }}>
-                - Quản lý cơ sở dữ liệu và tối ưu hóa hệ thống
-              </Typography>
-            </Stack>
-          </Stack>
-          <Stack>
-            <Stack
-              sx={{
-                color: "white",
-                flexDirection: "row",
-                alignItems: "center",
-                pt: { xs: 5, sm: 2 },
-                justifyContent: "space-between",
-              }}
-            >
-              <Typography
+                <Typography
+                  sx={{
+                    fontSize: { xs: 14, sm: 20 },
+                    fontWeight: 600,
+                    fontStyle: "italic",
+                  }}
+                >
+                  {item.position}
+                </Typography>
+              </Stack>
+              <Stack
                 sx={{
-                  fontSize: { xs: 20, sm: 30 },
-                  fontWeight: 600,
-                  textTransform: "uppercase",
+                  color: "white",
+                  justifyContent: "center",
+                  pt: 1,
                 }}
               >
-                CÔNG TY TNHH GIẢI PHÁP VNTTS
-              </Typography>
-              <Typography sx={{ fontSize: { xs: 10, sm: 14 } }}>
-                11/2021 - 04/2022
-              </Typography>
+                {item.description.map((desc, index) => (
+                  <Typography key={index} sx={{ fontSize: { xs: 14, sm: 16 } }}>
+                    - {desc}
+                  </Typography>
+                ))}
+              </Stack>
             </Stack>
-            <Stack
-              sx={{
-                color: "white",
-                pt: 1,
-              }}
-            >
-              <Typography
-                sx={{
-                  fontSize: { xs: 14, sm: 20 },
-                  fontWeight: 600,
-                  fontStyle: "italic",
-                }}
-              >
-                CTV Lập Trình Viên
-              </Typography>
-            </Stack>
-            <Stack
-              sx={{
-                color: "white",
-                justifyContent: "center",
-                pt: 1,
-              }}
-            >
-              <Typography sx={{ fontSize: { xs: 14, sm: 16 } }}>
-                - Hỗ trợ chỉnh sửa giao diện website và nghiên cứu phần mềm mã
-                nguồn mở.
-              </Typography>
-            </Stack>
-          </Stack>
+          ))}
         </Stack>
       </Stack>
     </Stack>
