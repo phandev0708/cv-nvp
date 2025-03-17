@@ -2,11 +2,12 @@
 import React, { useState } from "react";
 import { dataImage } from "@/mocks/data-image";
 import Image from "next/image";
-import { Dialog, Stack, useMediaQuery, useTheme } from "@mui/material";
+import { Dialog, Stack, Tooltip, useMediaQuery, useTheme } from "@mui/material";
 import style from "./style.module.css";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import SpeedDialTooltipOpen from "@/components/common/menu/menu-component";
 import ModalShowImage from "@/components/common/dialog/dialog-view-image";
+import { useTranslations } from "next-intl";
 
 export default function TitlebarBelowImageList() {
   const [open, setOpen] = useState(false);
@@ -14,8 +15,8 @@ export default function TitlebarBelowImageList() {
     img: "",
     title: "",
   });
-  const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const trans = useTranslations("imageComp");
+
   const handleClose = () => {
     setOpen(false);
     setDataImg({
@@ -57,23 +58,25 @@ export default function TitlebarBelowImageList() {
               key={index}
               sx={{ pt: 5 }}
             >
-              <Stack
-                className={style.swing}
-                sx={{ cursor: "pointer" }}
-                onClick={() => {
-                  setOpen(true);
-                  setDataImg(item);
-                }}
-              >
-                <Image
-                  src={item.img}
-                  alt={item.title}
-                  width={500}
-                  height={500}
-                  loading="lazy"
-                  className={style.img}
-                />
-              </Stack>
+              <Tooltip title={trans(item.title)}>
+                <Stack
+                  className={style.swing}
+                  sx={{ cursor: "pointer" }}
+                  onClick={() => {
+                    setOpen(true);
+                    setDataImg(item);
+                  }}
+                >
+                  <Image
+                    src={item.img}
+                    alt={trans(item.title)}
+                    width={500}
+                    height={500}
+                    loading="lazy"
+                    className={style.img}
+                  />
+                </Stack>
+              </Tooltip>
             </Grid2>
           );
         })}

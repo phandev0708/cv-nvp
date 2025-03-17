@@ -8,10 +8,12 @@ import CakeIcon from "@mui/icons-material/Cake";
 import MaleIcon from "@mui/icons-material/Male";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { useTranslations } from "next-intl";
 
 export interface IInfomationProps {}
 
 export default function Infomation(props: IInfomationProps) {
+  const trans = useTranslations();
   return (
     <Stack
       sx={{
@@ -139,7 +141,7 @@ export default function Infomation(props: IInfomationProps) {
                 fontStyle: "italic",
               }}
             >
-              Lập Trình Viên <span style={{ color: "aqua" }}>(FullStack)</span>
+              {trans("major")}
             </Typography>
           </Stack>
           <Stack sx={{ pt: 1 }}>
@@ -167,7 +169,7 @@ export default function Infomation(props: IInfomationProps) {
             >
               <MaleIcon sx={{ fontSize: { xs: 20, sm: 30 } }} />
               <Typography sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}>
-                : Nam
+                : {trans("gender")}
               </Typography>
             </Stack>
             <Stack
@@ -208,8 +210,7 @@ export default function Infomation(props: IInfomationProps) {
               <Typography
                 sx={{ color: "white", pt: 0.3, fontSize: { xs: 14, sm: 16 } }}
               >
-                : 289/G Tổ 9, Khu 7, P. Hiệp Thành, TP. Thủ Dầu Một, Tỉnh Bình
-                Dương
+                : {trans("address")}
               </Typography>
             </Stack>
           </Stack>
@@ -231,9 +232,7 @@ export default function Infomation(props: IInfomationProps) {
                   textAlign: "center",
                 }}
               >
-                <span style={{ fontSize: 30 }}>❝</span> Là một người điềm tĩnh,
-                thích ứng nhanh với môi trường mới, không ngại khó khăn, hứng
-                thú trong việc tìm ra hướng giải quyết cho vấn đề.{" "}
+                <span style={{ fontSize: 30 }}>❝</span> {trans("note")}{" "}
                 <span style={{ fontSize: 30 }}>❞</span>
               </Typography>
             </Stack>

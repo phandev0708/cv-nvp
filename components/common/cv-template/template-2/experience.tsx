@@ -1,33 +1,33 @@
 import { Stack, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export interface IExperienceCompProps {}
 
 export default function ExperienceComp(props: IExperienceCompProps) {
+  const trans = useTranslations("experiences");
   const data = [
     {
-      company: "BEARABYTE SOFTWARE SOLUTIONS LLC",
-      time: "08/2024 - Hiện nay",
-      position: "Nhân viên lập trình fullstack",
-      description: ["Phát triển website theo yêu cầu của khách hàng"],
+      company: "company1.name",
+      time: "company1.time",
+      position: "positionFullstack",
+      description: ["company1.description1"],
     },
     {
-      company: "Công ty cổ phần công nghệ ORYZA SYSTEMS",
-      time: "04/2022 - 21/03/2025",
-      position: "Nhân viên lập trình fullstack",
+      company: "company2.name",
+      time: "company2.time",
+      position: "positionFullstack",
       description: [
-        "Phát triển website theo yêu cầu của khách hàng",
-        "Hỗ trợ Deploy sản phẩm lên server",
-        "Quản lý cơ sở dữ liệu và tối ưu hóa hệ thống",
+        "company2.description1",
+        "company2.description2",
+        "company2.description3",
       ],
     },
     {
       company: "Công ty TNHH giải pháp VNTTS",
-      time: "11/2021 - 04/2022",
-      position: "CTV Lập Trình Viên",
-      description: [
-        "Hỗ trợ chỉnh sửa giao diện website và nghiên cứu phần mềm mã nguồn mở.",
-      ],
+      time: "company3.time",
+      position: "company3.position",
+      description: ["company3.description1"],
     },
   ];
   return (
@@ -65,7 +65,7 @@ export default function ExperienceComp(props: IExperienceCompProps) {
               // maxWidth: 400,
             }}
           >
-            Kinh Nghiệm Làm Việc
+            {trans("title")}
           </Typography>
           {data.map((item, index) => (
             <Stack key={index}>
@@ -85,10 +85,10 @@ export default function ExperienceComp(props: IExperienceCompProps) {
                     textTransform: "uppercase",
                   }}
                 >
-                  {item.company}
+                  {trans(item.company)}
                 </Typography>
                 <Typography sx={{ fontSize: { xs: 10, sm: 14 } }}>
-                  {item.time}
+                  {trans(item.time)}
                 </Typography>
               </Stack>
               <Stack
@@ -104,7 +104,7 @@ export default function ExperienceComp(props: IExperienceCompProps) {
                     fontStyle: "italic",
                   }}
                 >
-                  {item.position}
+                  {trans(item.position)}
                 </Typography>
               </Stack>
               <Stack
@@ -116,7 +116,7 @@ export default function ExperienceComp(props: IExperienceCompProps) {
               >
                 {item.description.map((desc, index) => (
                   <Typography key={index} sx={{ fontSize: { xs: 14, sm: 16 } }}>
-                    - {desc}
+                    - {trans(desc)}
                   </Typography>
                 ))}
               </Stack>

@@ -8,8 +8,10 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 import SpeedDialTooltipOpen from "@/components/common/menu/menu-component";
 import { useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const trans = useTranslations("home");
   useEffect(() => {
     let p: any = document.querySelector(".newYear");
     const dob = new Date(
@@ -41,7 +43,7 @@ export default function Home() {
       const CheckSec = sec / 10 >= 1 ? sec : "0" + sec;
       p.innerHTML =
         day +
-        " Ngày " +
+        ` ${trans("day")} ` +
         CheckHour +
         " : " +
         CheckMinute +
@@ -51,7 +53,7 @@ export default function Home() {
 
       if (new Date().getMonth() + 1 == 8 && new Date().getDate() == 7) {
         clearInterval(countDown);
-        p.innerHTML = "Happy Birthday To Nguyễn Văn Phần";
+        p.innerHTML = trans("birthday");
       }
     };
   }, []);
@@ -96,10 +98,12 @@ export default function Home() {
           <Stack className={style.cover}></Stack>
           <Stack
             className={style.userinfomain}
-            sx={{ justifyContent: "center", alignItems: "center", gap: 5 }}
+            sx={{ justifyContent: "center", alignItems: "center" }}
           >
             <h1 className={style.h1}>Nguyễn Văn Phần</h1>
-            <h2 className={style.h2}>Lập Trình Viên Fullstack</h2>
+            <h2 className={style.h2} style={{ paddingTop: 5 }}>
+              {trans("major")}
+            </h2>
           </Stack>
           <Stack className={style.Stackider}></Stack>
           <Stack

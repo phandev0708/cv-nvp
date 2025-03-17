@@ -1,9 +1,11 @@
 import { Stack, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export interface IEducationCompProps {}
 
 export default function EducationComp(props: IEducationCompProps) {
+  const trans = useTranslations("education");
   return (
     <Stack
       sx={{
@@ -39,7 +41,7 @@ export default function EducationComp(props: IEducationCompProps) {
               // maxWidth: 400,
             }}
           >
-            Học Vấn
+            {trans("title")}
           </Typography>
           <Stack
             sx={{
@@ -52,12 +54,12 @@ export default function EducationComp(props: IEducationCompProps) {
             }}
           >
             <Typography sx={{ fontSize: { xs: 20, sm: 30 }, fontWeight: 600 }}>
-              Đại học Thủ Dầu Một
+              {trans("university.name")}
             </Typography>
             <Typography
               sx={{ fontSize: { xs: 12, sm: 14 }, pr: { xs: 1, sm: 0 } }}
             >
-              8/2018 - 6/2022
+              {trans("university.time")}
             </Typography>
           </Stack>
           <Stack direction="row">
@@ -71,7 +73,7 @@ export default function EducationComp(props: IEducationCompProps) {
                 <Typography
                   sx={{ fontSize: { xs: 14, sm: 16 }, fontWeight: 600 }}
                 >
-                  Chuyên ngành:{" "}
+                  {trans("university.keys.specialized")}:{" "}
                 </Typography>
               </Stack>
               <Stack
@@ -83,7 +85,7 @@ export default function EducationComp(props: IEducationCompProps) {
                 <Typography
                   sx={{ fontSize: { xs: 14, sm: 16 }, fontWeight: 600 }}
                 >
-                  Tốt nghiệp loại:{" "}
+                  {trans("university.keys.graduation")}:{" "}
                 </Typography>
               </Stack>
               <Stack
@@ -95,7 +97,7 @@ export default function EducationComp(props: IEducationCompProps) {
                 <Typography
                   sx={{ fontSize: { xs: 14, sm: 16 }, fontWeight: 600 }}
                 >
-                  Điểm trung bình:{" "}
+                  {trans("university.keys.gpa")}:{" "}
                 </Typography>
               </Stack>
             </Stack>
@@ -110,7 +112,7 @@ export default function EducationComp(props: IEducationCompProps) {
                 }}
               >
                 <Typography sx={{ fontSize: { xs: 14, sm: 16 } }}>
-                  Kỹ thuật phần mềm
+                  {trans("university.values.specialized")}
                 </Typography>
               </Stack>
               <Stack
@@ -122,7 +124,7 @@ export default function EducationComp(props: IEducationCompProps) {
                 }}
               >
                 <Typography sx={{ fontSize: { xs: 14, sm: 16 } }}>
-                  Khá
+                  {trans("university.values.graduation")}
                 </Typography>
               </Stack>
               <Stack
@@ -134,7 +136,7 @@ export default function EducationComp(props: IEducationCompProps) {
                 }}
               >
                 <Typography sx={{ fontSize: { xs: 14, sm: 16 } }}>
-                  7.49
+                  {trans("university.values.gpa")}
                 </Typography>
               </Stack>
             </Stack>

@@ -1,9 +1,11 @@
 import { Stack, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export interface IInfoBottomProps {}
 
 export default function InfoBottom(props: IInfoBottomProps) {
+  const trans = useTranslations();
   return (
     <Stack
       sx={{
@@ -26,7 +28,7 @@ export default function InfoBottom(props: IInfoBottomProps) {
               maxWidth: 400,
             }}
           >
-            Mục Tiêu Nghề Nghiệp
+            {trans("careerObjective.title")}
           </Typography>
           <Stack
             sx={{
@@ -37,12 +39,7 @@ export default function InfoBottom(props: IInfoBottomProps) {
             }}
           >
             <Typography sx={{ pt: 0 }}>
-              Là một lập trình viên, tôi luôn trân trọng việc xây dựng và tạo ra
-              những ứng dụng mang tính ứng dụng cao. Sự sáng tạo và thách thức
-              trong việc giải quyết vấn đề kỹ thuật là động lực của tôi. Tôi tận
-              hưởng việc học hỏi và áp dụng những công nghệ mới, tạo ra những
-              sản phẩm có giá trị thực sự cho người dùng và đóng góp vào sự phát
-              triển của thế giới số hóa.
+              {trans("careerObjective.description")}
             </Typography>
           </Stack>
         </Stack>
@@ -65,7 +62,7 @@ export default function InfoBottom(props: IInfoBottomProps) {
               maxWidth: 400,
             }}
           >
-            Sở Thích
+            {trans("interests.title")}
           </Typography>
           <Stack
             sx={{
@@ -75,18 +72,8 @@ export default function InfoBottom(props: IInfoBottomProps) {
               pt: 1,
             }}
           >
-            <Typography sx={{ color: "white" }}>- Đá bóng</Typography>
-          </Stack>
-          <Stack
-            sx={{
-              color: "white",
-              flexDirection: "row",
-              alignItems: "center",
-              pt: 1,
-            }}
-          >
             <Typography sx={{ color: "white" }}>
-              - Du lịch với gia đình và bạn bè
+              - {trans("interests.football")}
             </Typography>
           </Stack>
           <Stack
@@ -97,7 +84,21 @@ export default function InfoBottom(props: IInfoBottomProps) {
               pt: 1,
             }}
           >
-            <Typography sx={{ color: "white" }}>- Chơi game</Typography>
+            <Typography sx={{ color: "white" }}>
+              - {trans("interests.travel")}
+            </Typography>
+          </Stack>
+          <Stack
+            sx={{
+              color: "white",
+              flexDirection: "row",
+              alignItems: "center",
+              pt: 1,
+            }}
+          >
+            <Typography sx={{ color: "white" }}>
+              - {trans("interests.travel")}
+            </Typography>
           </Stack>
         </Stack>
       </Stack>
@@ -118,7 +119,7 @@ export default function InfoBottom(props: IInfoBottomProps) {
               maxWidth: 400,
             }}
           >
-            Học Vấn
+            {trans("education.title")}
           </Typography>
           <Stack
             sx={{
@@ -131,9 +132,11 @@ export default function InfoBottom(props: IInfoBottomProps) {
             }}
           >
             <Typography sx={{ fontSize: 20, fontWeight: 700 }}>
-              Đại học Thủ Dầu Một
+              {trans("education.university.name")}
             </Typography>
-            <Typography sx={{ fontSize: 14 }}>8/2018 - 6/2022</Typography>
+            <Typography sx={{ fontSize: 14 }}>
+              {trans("education.university.time")}
+            </Typography>
           </Stack>
           <Stack
             sx={{
@@ -145,7 +148,9 @@ export default function InfoBottom(props: IInfoBottomProps) {
             }}
           >
             <Typography sx={{ fontSize: 16 }}>
-              Chuyên ngành: Kỹ thuật phần mềm
+              {`${trans("education.university.keys.specialized")}: ${trans(
+                "education.university.values.specialized"
+              )}`}
             </Typography>
           </Stack>
           <Stack
@@ -157,7 +162,11 @@ export default function InfoBottom(props: IInfoBottomProps) {
             }}
           >
             <Typography sx={{ fontSize: 16 }}>
-              Tốt nghiệp loại: Khá, Điểm: 7.49
+              {`${trans("education.university.keys.graduation")}: ${trans(
+                "education.university.values.graduation"
+              )}, ${trans("education.university.keys.gpa")}: ${trans(
+                "education.university.values.gpa"
+              )}`}
             </Typography>
           </Stack>
         </Stack>

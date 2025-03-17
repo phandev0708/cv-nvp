@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
+const createNextIntlPlugin = require("next-intl/plugin");
+
+const withNextIntl = createNextIntlPlugin();
+
 const nextConfig = {
   //   async rewrites() {
   //     return [
@@ -9,15 +13,15 @@ const nextConfig = {
   //     ];
   //   },
   reactStrictMode: true,
-  i18n: {
-    // These are all the locales you want to support in
-    // your application
-    locales: ["vi", "en"],
-    // This is the default locale you want to be used when visiting
-    // a non-locale prefixed path e.g. `/hello`
-    defaultLocale: "vi",
-    localeDetection: false,
-  },
+  // i18n: {
+  //   // These are all the locales you want to support in
+  //   // your application
+  //   locales: ["vi", "en"],
+  //   // This is the default locale you want to be used when visiting
+  //   // a non-locale prefixed path e.g. `/hello`
+  //   defaultLocale: "vi",
+  //   localeDetection: true,
+  // },
   images: {
     domains: [
       "localhost",
@@ -33,4 +37,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withNextIntl(nextConfig);

@@ -1,0 +1,98 @@
+{
+  "home": {
+    "day": "Ngày",
+    "birthday": "Chúc mừng sinh nhật Nguyễn Văn Phần",
+    "major": "Lập Trình Viên Fullstack"
+  },
+  "major": "Lập Trình Viên Fullstack",
+  "gender": "Nam",
+  "address": "289/G Tổ 9, Khu phố 7, Phường Hiệp Thành, thành phố Thủ Dầu Một, Tỉnh Bình Dương",
+  "note": "Là một người điềm tĩnh, thích ứng nhanh với môi trường mới, không ngại khó khăn, hứng thú trong việc tìm ra hướng giải quyết cho vấn đề.",
+  "openMenu": "Mở thanh công cụ phải",
+  "closeMenu": "Đóng thanh công cụ phải",
+  "homePage": "Trang chủ",
+  "cvPage": "CV",
+  "imagePage": "Hình ảnh",
+  "imageComp": {
+    "smartParking": "Triển khai bãi xe thông minh",
+    "rewardEmployee": "Khen thưởng nhân viên xuất sắc"
+  },
+  "cv": {
+    "personalInfo": "Thông Tin Cá Nhân",
+    "education": "Học Vấn",
+    "careerObjective": "Mục Tiêu Nghề Nghiệp",
+    "skills": "Kỹ Năng",
+    "experience": "Kinh Nghiệm Làm Việc",
+    "interests": "Sở Thích"
+  },
+  "interests": {
+    "title": "Sở Thích",
+    "football": "Đá bóng",
+    "travel": "Du lịch",
+    "music": "Nghe nhạc",
+    "sing": "Ca hát",
+    "photography": "Chụp ảnh",
+    "martialArts": "Võ thuật",
+    "gardening": "Làm vườn",
+    "game": "Chơi game"
+  },
+  "experiences": {
+    "title": "Kinh Nghiệm Làm Việc",
+    "positionFullstack": "Lập trình viên Fullstack",
+    "now": "Hiện tại",
+    "company1": {
+      "name": "BEARABYTE SOFTWARE SOLUTIONS LLC",
+      "time": "08/2024 - Hiện tại",
+      "description1": "Phát triển website theo yêu cầu của khách hàng"
+    },
+    "company2": {
+      "name": "Công ty cổ phần công nghệ ORYZA SYSTEMS",
+      "time": "04/2022 - 03/2025",
+      "description1": "Phát triển website theo yêu cầu của khách hàng",
+      "description2": "Hỗ trợ Deploy sản phẩm lên server",
+      "description3": "Quản lý cơ sở dữ liệu và tối ưu hóa hệ thống"
+    },
+    "company3": {
+      "name": "Công ty TNHH giải pháp VNTTS",
+      "time": "11/2021 - 04/2022",
+      "position": "CTV Lập Trình Viên",
+      "description1": "Hỗ trợ chỉnh sửa giao diện website và nghiên cứu phần mềm mã nguồn mở"
+    }
+  },
+  "skills": {
+    "title": "Kỹ Năng",
+    "skill1": {
+      "title": "Ngôn ngữ và Framework",
+      "description1": "HTML5, CSS, JavaScript",
+      "description2": "NestJs, NextJs, Typescript,...",
+      "description3": "SQL Server, MySQL, MariaDB, PostgreSQL"
+    },
+    "skill2": {
+      "title": "Quy trình làm việc",
+      "description1": "Phát triển website theo yêu cầu của khách hàng",
+      "description2": "Hỗ trợ Deploy sản phẩm lên server",
+      "description3": "Xử lý dữ liệu và tối ưu hóa hệ thống"
+    }
+  },
+  "careerObjective": {
+    "title": "Mục Tiêu Nghề Nghiệp",
+    "description": "Là một lập trình viên, tôi luôn trân trọng việc xây dựng và tạo ra những ứng dụng mang tính ứng dụng cao. Sự sáng tạo và thách thức trong việc giải quyết vấn đề kỹ thuật là động lực của tôi. Tôi tận hưởng việc học hỏi và áp dụng những công nghệ mới, tạo ra những sản phẩm có giá trị thực sự cho người dùng và đóng góp vào sự phát triển của thế giới số hóa."
+  },
+  "education": {
+    "title": "Học Vấn",
+    "university": {
+      "name": "Đại học Thủ Dầu Một",
+      "time": "8/2018 - 6/2022",
+      "keys": {
+        "specialized": "Chuyên ngành",
+        "graduation": "Tốt nghiệp loại",
+        "gpa": "Điểm trung bình"
+      },
+      "values": {
+        "specialized": "Kỹ thuật phần mềm",
+        "graduation": "Khá",
+        "gpa": "7.5"
+      }
+    }
+  }
+}

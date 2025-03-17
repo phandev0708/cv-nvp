@@ -3,10 +3,12 @@ import React from "react";
 import InfoTop from "../info/info-top";
 import InfoBottom from "../info/info-bottom";
 import style from "../../../app/my-cv/page.module.css";
+import { useTranslations } from "next-intl";
 
 export interface ICvOneProps {}
 
 export default function CvOne(props: ICvOneProps) {
+  const trans = useTranslations();
   return (
     <Stack sx={{ position: "absolute", zIndex: 9999 }}>
       <Stack
@@ -51,7 +53,7 @@ export default function CvOne(props: ICvOneProps) {
               Nguyễn Văn Phần
             </Typography>
             <Typography sx={{ fontSize: { xs: 15, md: 20 } }}>
-              Lập Trình Viên (FullStack)
+              {trans("major")}
             </Typography>
           </Stack>
         </Stack>
@@ -85,8 +87,7 @@ export default function CvOne(props: ICvOneProps) {
             textAlign: "center",
           }}
         >
-          Là một người điềm tĩnh, thích ứng nhanh với môi trường mới, không ngại
-          khó khăn, hứng thú trong việc tìm ra hướng giải quyết cho vấn đề.
+          {trans("note")}
         </Typography>
         <Stack
           sx={{ height: { xs: 200, md: 180 }, justifyContent: "flex-end" }}

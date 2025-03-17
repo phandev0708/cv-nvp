@@ -1,24 +1,26 @@
 import { Stack, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export interface ISkillCompProps {}
 
 export default function SkillComp(props: ISkillCompProps) {
+  const trans = useTranslations("skills");
   const data = [
     {
-      title: "Ngôn ngữ và Framework",
+      title: "skill1.title",
       content: [
-        "HTML5, CSS, JavaScript",
-        "NestJs, NextJs, Typescript,...",
-        "SQL Server, MySQL, MariaDB, PostgreSQL",
+        "skill1.description1",
+        "skill1.description2",
+        "skill1.description3",
       ],
     },
     {
-      title: "Quy trình làm việc",
+      title: "skill2.title",
       content: [
-        "Phát triển website theo yêu cầu của khách hàng",
-        "Hỗ trợ Deploy sản phẩm lên server",
-        "Xử lý dữ liệu và tối ưu hóa hệ thống",
+        "skill2.description1",
+        "skill2.description2",
+        "skill2.description3",
       ],
     },
   ];
@@ -56,7 +58,7 @@ export default function SkillComp(props: ISkillCompProps) {
               borderBottom: "2px solid white",
             }}
           >
-            Kỹ Năng
+            {trans("title")}
           </Typography>
           {data.map((item, index) => (
             <Stack sx={{ pt: 2 }} key={index}>
@@ -69,7 +71,7 @@ export default function SkillComp(props: ISkillCompProps) {
                     fontStyle: "italic",
                   }}
                 >
-                  {item.title}
+                  {trans(item.title)}
                 </Typography>
               </Stack>
               <Stack>
@@ -84,7 +86,7 @@ export default function SkillComp(props: ISkillCompProps) {
                       key={index}
                       sx={{ color: "white", fontSize: { xs: 14, sm: 16 } }}
                     >
-                      - {content}
+                      - {trans(content)}
                     </Typography>
                   ))}
                 </Stack>

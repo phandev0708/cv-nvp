@@ -3,12 +3,14 @@ import { Stack, Tooltip } from "@mui/material";
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { RightBarComponent } from "./rigth-bar";
+import { useTranslations } from "next-intl";
 
 export default function OpenIconSpeedDial() {
   const [open, setOpenRightBar] = useState(false);
+  const trans = useTranslations();
   return (
     <Stack>
-      <Tooltip title="Mở thanh công cụ phải.">
+      <Tooltip title={trans("openMenu")}>
         <Stack
           onClick={() => setOpenRightBar(true)}
           sx={{

@@ -1,7 +1,7 @@
 "use client";
 import { Avatar, Divider, Stack, Typography } from "@mui/material";
 import React from "react";
-import style from "../../../app/my-cv/page.module.css";
+import style from "../../../app/[locale]/my-cv/page.module.css";
 import Infomation from "./template-2/infomation";
 import EducationComp from "./template-2/education";
 import ButtonCustomOne from "../button-customs/button-custom-1";
@@ -9,11 +9,14 @@ import CareerGoalComp from "./template-2/career-goals";
 import SkillComp from "./template-2/skill";
 import ExperienceComp from "./template-2/experience";
 import InterestsComp from "./template-2/interests";
+import { useTranslations } from "next-intl";
 
 export interface ITemplateTwoProps {}
 
 export default function TemplateTwo(props: ITemplateTwoProps) {
   const [choose, setChoose] = React.useState<string>("ABOUT");
+  const trans = useTranslations("cv");
+
   const page = () => {
     switch (choose) {
       case "INTERESTS":
@@ -101,37 +104,37 @@ export default function TemplateTwo(props: ITemplateTwoProps) {
             </Stack>
             <Stack sx={{ pt: { xs: 1, sm: 3 } }}>
               <ButtonCustomOne
-                title="Thông Tin Cá Nhân"
+                title={trans("personalInfo")}
                 keySort={"ABOUT"}
                 choose={choose}
                 setChoose={setChoose}
               />
               <ButtonCustomOne
-                title="Học Vấn"
+                title={trans("education")}
                 keySort={"EDUCATION"}
                 choose={choose}
                 setChoose={setChoose}
               />
               <ButtonCustomOne
-                title="Mục Tiêu Nghề Nghiệp"
+                title={trans("careerObjective")}
                 keySort={"CAREER_GOALS"}
                 choose={choose}
                 setChoose={setChoose}
               />
               <ButtonCustomOne
-                title="Kỹ Năng"
+                title={trans("skills")}
                 keySort={"SKILL"}
                 choose={choose}
                 setChoose={setChoose}
               />
               <ButtonCustomOne
-                title="Kinh Nghiệm Làm Việc"
+                title={trans("experience")}
                 keySort={"EXPERIENCE"}
                 choose={choose}
                 setChoose={setChoose}
               />
               <ButtonCustomOne
-                title="Sở Thích"
+                title={trans("interests")}
                 keySort={"INTERESTS"}
                 choose={choose}
                 setChoose={setChoose}

@@ -12,7 +12,7 @@ export interface ItemNavRight {
 }
 
 export const navigationMock: ItemNavRight[] = [
-  { icon: PersonPinIcon, title: "Trang chủ", path: "/" },
-  { icon: DescriptionOutlinedIcon, title: "CV", path: "/my-cv" },
-  { icon: ImageOutlinedIcon, title: "Hình ảnh", path: "/image" },
+  { icon: PersonPinIcon, title: "homePage", path: "/" },
+  { icon: DescriptionOutlinedIcon, title: "cvPage", path: "/my-cv" },
+  { icon: ImageOutlinedIcon, title: "imagePage", path: "/image" },
 ];

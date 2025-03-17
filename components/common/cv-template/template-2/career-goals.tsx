@@ -1,9 +1,11 @@
 import { Stack, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export interface ICareerGoalCompProps {}
 
 export default function CareerGoalComp(props: ICareerGoalCompProps) {
+  const trans = useTranslations("careerObjective");
   return (
     <Stack
       sx={{
@@ -32,7 +34,7 @@ export default function CareerGoalComp(props: ICareerGoalCompProps) {
               borderBottom: "2px solid white",
             }}
           >
-            Mục Tiêu Nghề Nghiệp
+            {trans("title")}
           </Typography>
           <Stack
             sx={{
@@ -40,14 +42,7 @@ export default function CareerGoalComp(props: ICareerGoalCompProps) {
               pt: 5,
             }}
           >
-            <Typography sx={{ pt: 0 }}>
-              Là một lập trình viên, tôi luôn trân trọng việc xây dựng và tạo ra
-              những ứng dụng mang tính ứng dụng cao. Sự sáng tạo và thách thức
-              trong việc giải quyết vấn đề kỹ thuật là động lực của tôi. Tôi tận
-              hưởng việc học hỏi và áp dụng những công nghệ mới, tạo ra những
-              sản phẩm có giá trị thực sự cho người dùng và đóng góp vào sự phát
-              triển của thế giới số hóa.
-            </Typography>
+            <Typography sx={{ pt: 0 }}>{trans("description")}</Typography>
           </Stack>
         </Stack>
       </Stack>

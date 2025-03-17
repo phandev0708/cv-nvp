@@ -1,0 +1,98 @@
+{
+  "home": {
+    "day": "Day",
+    "birthday": "Happy birthday Nguyen Van Phan",
+    "major": "Fullstack Developer"
+  },
+  "major": "Fullstack Developer",
+  "gender": "Male",
+  "address": "289/G Group 9, Quarter 7, Hiep Thanh Ward, Thu Dau Mot City, Binh Duong Province",
+  "note": "I am a calm person, quickly adapt to new environments, not afraid of difficulties, interested in finding solutions to problems.",
+  "openMenu": "Open right toolbar",
+  "closeMenu": "Close right toolbar",
+  "homePage": "Home",
+  "cvPage": "CV",
+  "imagePage": "Image",
+  "imageComp": {
+    "smartParking": "Implementing smart parking",
+    "rewardEmployee": "Rewarding outstanding employees"
+  },
+  "cv": {
+    "personalInfo": "Personal Information",
+    "education": "Education",
+    "careerObjective": "Career Objective",
+    "skills": "Skills",
+    "experience": "Work Experience",
+    "interests": "Hobbies"
+  },
+  "interests": {
+    "title": "Hobbies",
+    "football": "Play football",
+    "travel": "Travel",
+    "music": "Music",
+    "sing": "Sing",
+    "photography": "Take photos",
+    "martialArts": "Martial arts",
+    "gardening": "Gardening",
+    "game": "Play game"
+  },
+  "experiences": {
+    "title": "Work Experience",
+    "positionFullstack": "Fullstack Developer",
+    "now": "Now",
+    "company1": {
+      "name": "BEARABYTE SOFTWARE SOLUTIONS LLC",
+      "time": "08/2024 - Now",
+      "description1": "Developing websites according to customer requirements"
+    },
+    "company2": {
+      "name": "ORYZA SYSTEMS Technology Joint Stock Company",
+      "time": "04/2022 - 03/2025",
+      "description1": "Developing websites according to customer requirements",
+      "description2": "Support Deploy products to server",
+      "description3": "Manage databases and optimize systems"
+    },
+    "company3": {
+      "name": "VNTTS Solution Limited Company",
+      "time": "11/2021 - 04/2022",
+      "position": "Part-time Fullstack Developer",
+      "description1": "Support editing website interface and researching open source software"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "skill1": {
+      "title": "Languages and Frameworks",
+      "description1": "HTML5, CSS, JavaScript",
+      "description2": "NestJs, NextJs, Typescript,...",
+      "description3": "SQL Server, MySQL, MariaDB, PostgreSQL"
+    },
+    "skill2": {
+      "title": "Work process",
+      "description1": "Developing websites according to customer requirements",
+      "description2": "Support Deploy products to server",
+      "description3": "Handle data and optimize systems"
+    }
+  },
+  "careerObjective": {
+    "title": "Career Objective",
+    "description": "I am a Fullstack Developer with 3 years of experience in developing websites according to customer requirements. I am looking for a position that can help me develop my skills and contribute to the company's success."
+  },
+  "education": {
+    "title": "Education",
+    "university": {
+      "name": "Thu Dau Mot University",
+      "time": "8/2018 - 6/2022",
+      "keys": {
+        "specialized": "Specialized",
+        "graduation": "Graduation Classification",
+        "gpa": "GPA"
+      },
+      "values": {
+        "specialized": "Software Engineering",
+        "graduation": "Good",
+        "gpa": "7.5"
+      }
+    }
+  }
+}

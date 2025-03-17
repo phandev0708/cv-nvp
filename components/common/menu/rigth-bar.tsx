@@ -2,6 +2,7 @@
 import { ItemNavRight, navigationMock } from "@/mocks/data-menu";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import { Drawer, IconButton, Stack, Tooltip, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 interface RightBarComponentProps {
   close: () => void;
@@ -12,6 +13,7 @@ export const RightBarComponent = (props: RightBarComponentProps) => {
   const router = useRouter();
   // get path
   const pathName = usePathname();
+  const trans = useTranslations();
 
   return (
     <Drawer
@@ -31,7 +33,7 @@ export const RightBarComponent = (props: RightBarComponentProps) => {
         }}
       >
         <Stack sx={{ alignItems: "flex-end", p: 2 }}>
-          <Tooltip title="Đóng thanh công cụ phải.">
+          <Tooltip title={trans("closeMenu")}>
             <IconButton
               aria-label="settings"
               color={"inherit"}
@@ -48,7 +50,9 @@ export const RightBarComponent = (props: RightBarComponentProps) => {
           {navigationMock.map((v: ItemNavRight, k) => {
             const isActived = v?.path
               ? v?.path === "/"
-                ? pathName === v.path
+                ? pathName === "/en" || pathName === "/vi"
+                  ? true
+                  : false
                 : pathName.includes(v.path)
               : false;
             return (
@@ -75,7 +79,7 @@ export const RightBarComponent = (props: RightBarComponentProps) => {
                 }}
               >
                 <v.icon />
-                <Typography>{v.title}</Typography>
+                <Typography>{trans(v.title)}</Typography>
               </Stack>
             );
           })}

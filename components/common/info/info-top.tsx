@@ -6,10 +6,12 @@ import HomeIcon from "@mui/icons-material/Home";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import CakeIcon from "@mui/icons-material/Cake";
 import MaleIcon from "@mui/icons-material/Male";
+import { useTranslations } from "next-intl";
 
 export interface IInfoTopProps {}
 
 export default function InfoTop(props: IInfoTopProps) {
+  const trans = useTranslations();
   return (
     <Stack
       sx={{
@@ -30,7 +32,7 @@ export default function InfoTop(props: IInfoTopProps) {
               maxWidth: 400,
             }}
           >
-            Thông Tin Cá Nhân
+            {trans("cv.personalInfo")}
           </Typography>
           <Stack
             sx={{
@@ -52,7 +54,7 @@ export default function InfoTop(props: IInfoTopProps) {
             }}
           >
             <MaleIcon />
-            <Typography sx={{ color: "white" }}>: Nam</Typography>
+            <Typography sx={{ color: "white" }}>: {trans("gender")}</Typography>
           </Stack>
           <Stack
             sx={{
@@ -88,8 +90,7 @@ export default function InfoTop(props: IInfoTopProps) {
           >
             <HomeIcon />
             <Typography sx={{ color: "white", pt: 0.3 }}>
-              : 289/G Tổ 9, Khu 7, P. Hiệp Thành, TP. Thủ Dầu Một, Tỉnh Bình
-              Dương
+              : {trans("address")}
             </Typography>
           </Stack>
           <Stack
@@ -128,7 +129,7 @@ export default function InfoTop(props: IInfoTopProps) {
               maxWidth: 400,
             }}
           >
-            Kỹ Năng
+            {trans("skills.title")}
           </Typography>
           <Stack
             sx={{
@@ -139,7 +140,7 @@ export default function InfoTop(props: IInfoTopProps) {
             }}
           >
             <Typography sx={{ color: "white" }}>
-              - HTML5, CSS, JavaScript
+              - {trans("skills.skill1.description1")}
             </Typography>
           </Stack>
           <Stack
@@ -151,7 +152,7 @@ export default function InfoTop(props: IInfoTopProps) {
             }}
           >
             <Typography sx={{ color: "white" }}>
-              - NestJs, NextJs, Typescript,...
+              - {trans("skills.skill1.description2")}
             </Typography>
           </Stack>
           <Stack
@@ -163,7 +164,7 @@ export default function InfoTop(props: IInfoTopProps) {
             }}
           >
             <Typography sx={{ color: "white" }}>
-              - SQL Server, MySQL, MariaDB, PostgreSQL
+              - {trans("skills.skill1.description3")}
             </Typography>
           </Stack>
         </Stack>
@@ -186,7 +187,7 @@ export default function InfoTop(props: IInfoTopProps) {
               maxWidth: 400,
             }}
           >
-            Kinh Nghiệm Làm Việc
+            {trans("experiences.title")}
           </Typography>
           <Stack
             sx={{
@@ -205,10 +206,10 @@ export default function InfoTop(props: IInfoTopProps) {
                 textTransform: "uppercase",
               }}
             >
-              Công ty cổ phần công nghệ ORYZA SYSTEMS
+              {trans("experiences.company1.name")}
             </Typography>
             <Typography sx={{ fontSize: 14, width: 200, pt: 0.4, pl: 1 }}>
-              4/2022 - Nay
+              {trans("experiences.company1.time")}
             </Typography>
           </Stack>
           <Stack

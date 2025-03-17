@@ -1,18 +1,20 @@
 import { Grid, Stack, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export interface IInterestsCompProps {}
 
 export default function InterestsComp(props: IInterestsCompProps) {
+  const trans = useTranslations("interests");
   const data = [
-    "⚽ Đá banh",
-    "🌏 Du lịch",
-    "🎤 Ca hát",
-    "📷 Chụp ảnh",
-    "🥋 Võ thuật",
-    "🌳 Làm vườn",
-    "🎮 Chơi game",
-    "🎧 Nghe nhạc",
+    "⚽ " + trans("football"),
+    "🌏 " + trans("travel"),
+    "🎤 " + trans("sing"),
+    "📷 " + trans("photography"),
+    "🥋 " + trans("martialArts"),
+    "🌳 " + trans("gardening"),
+    "🎮 " + trans("game"),
+    "🎧 " + trans("music"),
   ];
   return (
     <Stack
@@ -47,7 +49,7 @@ export default function InterestsComp(props: IInterestsCompProps) {
               borderBottom: "2px solid white",
             }}
           >
-            Sở Thích
+            {trans("title")}
           </Typography>
 
           <Stack sx={{ pt: 3, pl: { xs: 0, sm: 0 } }}>
