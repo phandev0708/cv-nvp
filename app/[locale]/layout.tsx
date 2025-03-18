@@ -2,10 +2,11 @@ import { routing } from "@/i18n/routing";
 import "./globals.css";
 import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
+import { ThemeProvider } from "@/components/common/theme-provider";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CV - Nguyễn Văn Phần",
@@ -27,10 +28,12 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
-        <NextIntlClientProvider locale={locale}>
-          {children}
-        </NextIntlClientProvider>
+      <body>
+        <ThemeProvider>
+          <NextIntlClientProvider locale={locale}>
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

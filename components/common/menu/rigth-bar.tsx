@@ -1,13 +1,25 @@
 "use client";
 import { ItemNavRight, navigationMock } from "@/mocks/data-menu";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
-import { Drawer, IconButton, Stack, Tooltip, Typography } from "@mui/material";
+import {
+  Drawer,
+  IconButton,
+  MenuItem,
+  Select,
+  Stack,
+  styled,
+  Switch,
+  Tooltip,
+  Typography,
+} from "@mui/material";
 import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 import { usePathname, useRouter } from "next/navigation";
 interface RightBarComponentProps {
   close: () => void;
   open: boolean;
 }
+
 export const RightBarComponent = (props: RightBarComponentProps) => {
   const { close, open } = props;
   const router = useRouter();
@@ -28,7 +40,7 @@ export const RightBarComponent = (props: RightBarComponentProps) => {
         sx={{
           width: "300px",
           height: "100vh",
-          padding: "0px 20px",
+          padding: "0px 10px",
           bgcolor: "rgba(255, 255, 255, 0.6)",
         }}
       >

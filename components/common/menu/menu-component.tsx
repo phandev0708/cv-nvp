@@ -5,7 +5,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { RightBarComponent } from "./rigth-bar";
 import { useTranslations } from "next-intl";
 
-export default function OpenIconSpeedDial() {
+interface OpenIconSpeedDialProps {}
+
+export default function OpenIconSpeedDial(props: OpenIconSpeedDialProps) {
   const [open, setOpenRightBar] = useState(false);
   const trans = useTranslations();
   return (
