@@ -29,7 +29,12 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body>
-        <ThemeProvider>
+        <ThemeProvider
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+          attribute={"class"}
+        >
           <NextIntlClientProvider locale={locale}>
             {children}
           </NextIntlClientProvider>

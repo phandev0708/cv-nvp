@@ -310,10 +310,22 @@ export default function Home({ params }: any) {
             "& fieldset": {
               border: "none",
             },
+            color: theme === "dark" ? "#fff" : "#000",
+            "& .MuiSelect-icon": {
+              color: theme === "dark" ? "#fff" : "#000",
+            },
+            "& .MuiSelect-select": {
+              color: theme === "dark" ? "#fff" : "#000",
+            },
+            "& .MuiSelect-root": {
+              backgroundColor: theme === "dark" ? "#000" : "#fff",
+            },
           }}
         >
           <MenuItem value="vi">Vi</MenuItem>
-          <MenuItem value="en">Eng</MenuItem>
+          <MenuItem value="en" className="!text-red">
+            Eng
+          </MenuItem>
         </Select>
         <SpeedDialTooltipOpen />
       </Stack>
